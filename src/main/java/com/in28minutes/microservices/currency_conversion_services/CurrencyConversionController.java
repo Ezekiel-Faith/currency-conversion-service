@@ -13,9 +13,9 @@ public class CurrencyConversionController {
     @GetMapping("/currency-conversion/from/{from}/to/{to}/quantity/{quantity}")
     public CurrencyConversion calcCurrencyConversion(
             @PathVariable String from, @PathVariable String to,
-            @PathVariable BigDecimal qty) {
+            @PathVariable BigDecimal quantity) {
 
-        return new CurrencyConversion(100L, from, to, qty, BigDecimal.ONE,
+        return new CurrencyConversion(100L, from, to, quantity, BigDecimal.ONE,
                  BigDecimal.ONE, "");
     }
 }
